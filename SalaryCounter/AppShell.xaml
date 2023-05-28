@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="SalaryCounter.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:SalaryCounter"
+    xmlns:pages="clr-namespace:SalaryCounter.Views"
+    Shell.FlyoutBehavior="Disabled"
+    Shell.NavBarIsVisible="False"
+    Shell.TabBarIsVisible="True">
+
+    <FlyoutItem FlyoutDisplayOptions="AsMultipleItems">
+        <ShellContent
+        Title="Работники"
+        ContentTemplate="{DataTemplate pages:EmployerPage}">
+        </ShellContent>
+        <ShellContent
+        Title="Задачи"
+        ContentTemplate="{DataTemplate pages:EmployerTaskPage}">
+        </ShellContent>
+        <ShellContent
+        Title="Отчёты"
+        ContentTemplate="{DataTemplate pages:ReportPage}">
+        </ShellContent>
+        <ShellContent
+        Title="Настройки"
+        ContentTemplate="{DataTemplate local:MainPage}">
+        </ShellContent>
+    </FlyoutItem>
+
+</Shell>

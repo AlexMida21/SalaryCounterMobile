@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SalaryCounter.Views.ReportPage"
+             Title="ReportPage"
+             NavigatedTo="ContentPage_NavigatedTo"
+             xmlns:viewModels="clr-namespace:SalaryCounter.ViewModels">
+    <VerticalStackLayout>
+        <Frame BackgroundColor="Transparent" BorderColor="{StaticResource Primary}" Margin="20">
+            <VerticalStackLayout Margin="20">
+                <HorizontalStackLayout>
+                <Label Text="Команда: " VerticalOptions="Center"></Label>
+                <Picker x:Name="pickerCommand" BackgroundColor="Transparent" SelectedItem="{Binding ChooseCommand}" ItemsSource="{Binding Commands}" 
+                                 Margin="5,0,0,0" WidthRequest="290" Title="Выбрать команду" />
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout>
+                <Label Text="Работник: " VerticalOptions="Center"></Label>
+                <Picker x:Name="pickerEmployer" BackgroundColor="Transparent" SelectedItem="{Binding ChooseEmployer}" ItemsSource="{Binding PickerEmployer}" 
+                                 Margin="0,0,0,0" WidthRequest="290" Title="Выбрать работника" />
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout>
+                <Label Text="Задача: " VerticalOptions="Center"></Label>
+                <Picker x:Name="pickerTask" BackgroundColor="Transparent" SelectedItem="{Binding ChooseTask}" ItemsSource="{Binding PickerTask}" 
+                                 Margin="16,0,0,0" WidthRequest="290" Title="Выбрать задачу" />
+            </HorizontalStackLayout>
+            
+            <Button Command="{Binding ClickedCommand}" Margin="0,20,0,0" TextColor="{StaticResource Primary}" BorderColor="{StaticResource Primary}" BackgroundColor="Transparent"  BorderWidth="1" WidthRequest="110" HorizontalOptions="Center" Text="Выполнить"/>
+        </VerticalStackLayout>
+        </Frame>
+        <Image
+                x:Name="Image"
+                Margin="0,70,0,0"
+                Source="dotnet_bot.png"
+                HeightRequest="200"
+                HorizontalOptions="Center" />
+        <Label Text="Сгенерированный документ " FontAttributes="Italic" HorizontalOptions="Center" TextColor="{StaticResource Primary}" Margin="0,10,0,0"></Label>
+        <Label Text="будет отправлен на почту " FontAttributes="Italic" HorizontalOptions="Center" TextColor="{StaticResource Primary}"></Label>
+
+    </VerticalStackLayout>
+</ContentPage>
