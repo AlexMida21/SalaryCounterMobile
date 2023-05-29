@@ -29,8 +29,8 @@ public class SendMail
 
     public void SendFileMail(string str)
     {
-        string senderEmail = "alexeimatsalo@ya.ru";
-        string senderPassword = "huadgexzskmirrdx";
+        string senderEmail = "*****************";
+        string senderPassword = "**************";
         string recipientEmail = MainPage.mailHolder;
         string subject = ("Отчётность - " + str);
         string body = "Сгенерированный csv файл: ";
